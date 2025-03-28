@@ -77,17 +77,17 @@ export default class Level01 extends Base2DScene {
       // passieren soll.
       // Hier wird der Spieler halb so gross, und mit jedem Frame wird er wieder
       // normaler. Nach 3 Sekunden erreicht er seine normale Grösse.
-      // this.tweens.addCounter({
-      //   from: 0.5,
-      //   to: 1,
-      //   ease: "Linear",
-      //   duration: 3000,
-      //   repeat: 0,
-      //   onUpdate: (tween) => {
-      //     const val = tween.getValue()
-      //     this.player.setScale(val)
-      //   },
-      // })
+      this.tweens.addCounter({
+        from: 0.5,
+        to: 1,
+        ease: "Linear",
+        duration: 3000,
+        repeat: 0,
+        onUpdate: (tween) => {
+          const val = tween.getValue()
+          this.player.setScale(val)
+        },
+      })
     }
   }
 }
