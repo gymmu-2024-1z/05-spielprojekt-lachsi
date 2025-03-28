@@ -156,6 +156,10 @@ export default class Base2DScene extends Phaser.Scene {
    */
   pickUp(actor, item) {
     item.destroy()
+    if (item instanceof Flower) {
+      actor.addKey("flower")
+      console.log(actor.keys)
+    }
   }
 
   /**
