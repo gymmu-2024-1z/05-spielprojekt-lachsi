@@ -90,4 +90,20 @@ export default class Level01 extends Base2DScene {
       })
     }
   }
+
+  update() {
+    super.update()
+    if (this.npcs) {
+      const x = this.player.body.x
+      const y = this.player.body.y
+      ///console.log(x, y)
+      this.npcs.getChildren().forEach((npc) => {
+        const a = npc.body.x
+        const b = npc.body.y
+
+        npc.body.setVelocityX(((a - x) / Math.abs(a - x)) * -100)
+        npc.body.setVelocityY(((b - y) / Math.abs(b - y)) * -100)
+      })
+    }
+  }
 }
