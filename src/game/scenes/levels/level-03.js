@@ -38,7 +38,7 @@ export default class Level03 extends Base2DScene {
       this.player.increaseSpeed(100)
       this.player.damage(item.props.damageHp || 0)
       if (this.player.hp <= 0) {
-        this.scene.start("loading")
+        //this.scene.start("loading")
         // Wenn der Spieler 0 Punkte hat, wird das Spiel neu geladen.
       }
     }
@@ -51,7 +51,7 @@ export default class Level03 extends Base2DScene {
       to: 2,
       ease: "linear",
       duration: 5000,
-      repeat: 1,
+      repeat: 0,
       onUpdate: (turnaround) => {
         const val = turnaround.getValue()
         this.player.setScale(val)
