@@ -44,6 +44,7 @@ export default class LoadingScene extends Phaser.Scene {
     this.SPACE = this.input.keyboard.addKey(
       Phaser.Input.Keyboard.KeyCodes.SPACE,
     )
+    //this.load.audio("CatAstroPhi", ["./assets/sound/sound.mp3"])
   }
 
   create() {
@@ -52,6 +53,9 @@ export default class LoadingScene extends Phaser.Scene {
     this.add
       .text(320, 240, "Press SPACE to start the Game.")
       .setOrigin(0.5, 0.5)
+
+    //this.catAstroPhi = this.sound.add("CatAstroPhi")
+    //this.catAstroPhi.play()
   }
 
   update() {
