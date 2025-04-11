@@ -31,11 +31,11 @@ export default class Level02 extends Base2DScene {
       // Dieses Objekt gehört zu der Klasse von "Flower"
       this.player.addKey("level-02")
       this.player.increaseSpeed(100)
-      this.player.heal(item.props.restoreHp || 0)
+      this.player.heal(5)
     } else if (item instanceof Mushroom) {
       // Dieses Objekt gehört zu der Klasse von "Mushroom"
       this.player.decreaseSpeed(100)
-      this.player.damage(item.props.damageHp || 0)
+      this.player.damage(20)
       if (this.player.hp <= 0) {
         this.scene.start("loading")
       }

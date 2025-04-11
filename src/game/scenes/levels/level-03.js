@@ -32,13 +32,13 @@ export default class Level03 extends Base2DScene {
       // Dieses Objekt gehört zu der Klasse von "Flower"
       this.player.addKey("level-03")
       this.player.increaseSpeed(100)
-      this.player.heal(item.props.restoreHp || 0)
+      this.player.heal(15)
     } else if (item instanceof Mushroom) {
       // Dieses Objekt gehört zu der Klasse von "Mushroom"
       this.player.increaseSpeed(100)
-      this.player.damage(item.props.damageHp || 0)
+      this.player.damage(25)
       if (this.player.hp <= 0) {
-        //this.scene.start("loading")
+        this.scene.start("loading")
         // Wenn der Spieler 0 Punkte hat, wird das Spiel neu geladen.
       }
     }

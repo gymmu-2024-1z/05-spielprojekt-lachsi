@@ -9,4 +9,4 @@
 - [ ] Präsentation für das Endprodukt in (`pres.html`) anpassen
 - [ ] Komponenten für Items hinzufügen.
 - [ ] Dialogsystem hinzufügen.
-- [ ] Inventar hinzufügen.
+- [x] Inventar hinzufügen.
