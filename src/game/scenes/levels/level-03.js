@@ -35,18 +35,22 @@ export default class Level03 extends Base2DScene {
       this.player.heal(item.props.restoreHp || 0)
     } else if (item instanceof Mushroom) {
       // Dieses Objekt gehört zu der Klasse von "Mushroom"
-      this.player.decreaseSpeed(100)
+      this.player.increaseSpeed(100)
       this.player.damage(item.props.damageHp || 0)
+      if (this.player.hp <= 0) {
+        this.scene.start("loading")
+        // Wenn der Spieler 0 Punkte hat, wird das Spiel neu geladen.
+      }
     }
     // TODO: Aktivieren Sie das hier, wenn ein Effekt über eine gewisse Zeit
     // passieren soll.
     // Hier dreht sich der Spieler im Kreis und mit jedem Frame dreht er sich weiter um seine Achse.
-    // Nach 6 Sekunden hört er wieder auf.
+    // Nach 5 Sekunden hört er wieder auf.
     this.tweens.addCounter({
       from: 1,
       to: 2,
       ease: "linear",
-      duration: 6000,
+      duration: 5000,
       repeat: 1,
       onUpdate: (turnaround) => {
         const val = turnaround.getValue()

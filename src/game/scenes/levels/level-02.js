@@ -36,6 +36,9 @@ export default class Level02 extends Base2DScene {
       // Dieses Objekt gehört zu der Klasse von "Mushroom"
       this.player.decreaseSpeed(100)
       this.player.damage(item.props.damageHp || 0)
+      if (this.player.hp <= 0) {
+        this.scene.start("loading")
+      }
 
       // TODO: Aktivieren Sie das hier, wenn ein Effekt über eine gewisse Zeit
       // passieren soll.
