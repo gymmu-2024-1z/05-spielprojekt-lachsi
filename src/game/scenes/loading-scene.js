@@ -18,6 +18,10 @@ export default class LoadingScene extends Phaser.Scene {
       frameWidth: 32,
       frameHeight: 32,
     })
+    this.load.spritesheet("hai", "./assets/player2.png", {
+      frameWidth: 32,
+      frameHeight: 32,
+    })
 
     // Lade das Tileset für die Karten und die Objekte.
     this.load.image("tileset", "./assets/tileset.png")
@@ -66,10 +70,28 @@ export default class LoadingScene extends Phaser.Scene {
       frameRate: 10,
       repeat: -1,
     })
+    this.anims.create({
+      key: "hai_idle",
+      frames: this.anims.generateFrameNumbers("hai", {
+        start: 1,
+        end: 1,
+      }),
+      frameRate: 10,
+      repeat: -1,
+    })
 
     this.anims.create({
       key: "player_right",
       frames: this.anims.generateFrameNumbers("player", {
+        start: 6,
+        end: 8,
+      }),
+      frameRate: 10,
+      repeat: -1,
+    })
+    this.anims.create({
+      key: "hai_right",
+      frames: this.anims.generateFrameNumbers("hai", {
         start: 6,
         end: 8,
       }),
@@ -87,6 +109,15 @@ export default class LoadingScene extends Phaser.Scene {
       repeat: -1,
     })
     this.anims.create({
+      key: "hai_left",
+      frames: this.anims.generateFrameNumbers("hai", {
+        start: 3,
+        end: 5,
+      }),
+      frameRate: 10,
+      repeat: -1,
+    })
+    this.anims.create({
       key: "player_up",
       frames: this.anims.generateFrameNumbers("player", {
         start: 9,
@@ -96,8 +127,26 @@ export default class LoadingScene extends Phaser.Scene {
       repeat: -1,
     })
     this.anims.create({
+      key: "hai_up",
+      frames: this.anims.generateFrameNumbers("hai", {
+        start: 9,
+        end: 11,
+      }),
+      frameRate: 10,
+      repeat: -1,
+    })
+    this.anims.create({
       key: "player_down",
       frames: this.anims.generateFrameNumbers("player", {
+        start: 0,
+        end: 2,
+      }),
+      frameRate: 10,
+      repeat: -1,
+    })
+    this.anims.create({
+      key: "hai_down",
+      frames: this.anims.generateFrameNumbers("hai", {
         start: 0,
         end: 2,
       }),
