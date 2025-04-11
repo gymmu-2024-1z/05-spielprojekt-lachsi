@@ -42,12 +42,12 @@ export default class Level03 extends Base2DScene {
     // passieren soll.
     // Hier dreht sich der Spieler im Kreis und mit jedem Frame dreht er sich weiter um seine Achse.
     // Nach 6 Sekunden hört er wieder auf.
-    this.turnaround.addCounter({
-      from: RIGHT,
-      to: LEFT,
-      ease: "rotation",
+    this.tweens.addCounter({
+      from: 1,
+      to: 2,
+      ease: "linear",
       duration: 6000,
-      repeat: 0,
+      repeat: 1,
       onUpdate: (turnaround) => {
         const val = turnaround.getValue()
         this.player.setScale(val)

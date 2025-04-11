@@ -72,6 +72,9 @@ export default class Level01 extends Base2DScene {
       // Das Objekt ist von der Klasse `Mushroom`
       this.player.decreaseSpeed(100)
       this.player.damage(item.props.damageHp || 0)
+      if (this.player.hp <= 0) {
+        this.scene.start("loading")
+      }
 
       // TODO: Aktivieren Sie das hier, wenn ein Effekt über eine gewisse Zeit
       // passieren soll.
@@ -85,7 +88,10 @@ export default class Level01 extends Base2DScene {
         repeat: 0,
         onUpdate: (tween) => {
           const val = tween.getValue()
-          this.player.setScale(val)
+          this.player.rotation += 0.1
+        },
+        onComplete: () => {
+          this.player.rotation = 0
         },
       })
     }
