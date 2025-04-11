@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="33" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="12">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="33" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="17">
  <editorsettings>
   <export target="../public/assets/maps/map-level-01.json" format="json"/>
  </editorsettings>
@@ -68,11 +68,11 @@
 8,2,6,2,1,2,1,2,1,6,1,1,6,1,8,1,1,1,1,8,
 8,1,1,2,1,6,1,6,1,1,1,1,1,1,8,8,8,0,8,8,
 8,3,0,1,1,2,1,2,2,2,1,6,1,2,6,2,8,8,8,8,
-8,8,8,0,1,1,1,4,1,1,3,1,1,1,1,1,0,1,8,8,
+8,8,8,0,1,1,1,4,1,1,0,1,1,1,1,1,0,1,8,8,
 8,8,8,8,2,2,6,2,1,1,6,2,1,1,6,1,2,6,8,8,
-8,8,8,2,3,1,1,1,1,1,2,2,5,1,1,1,1,1,2,8,
+8,8,8,2,0,1,1,1,1,1,2,2,5,1,1,1,1,1,2,8,
 2,8,1,6,1,6,2,2,1,6,1,2,6,2,6,1,2,2,8,8,
-8,6,1,1,1,2,0,1,1,1,1,1,1,1,1,3,2,2,8,8,
+8,6,1,1,1,2,0,1,1,1,1,1,1,1,1,0,2,2,8,8,
 8,4,1,1,1,1,2,6,1,4,1,1,6,2,0,2,2,8,8,8,
 1,1,3,6,8,8,8,8,0,2,1,8,8,8,8,8,8,8,8,8,
 8,8,8,8,8,2,8,8,8,8,8,8,8,8,8,8,8,8,8,8
@@ -120,6 +120,19 @@
    </properties>
   </object>
   <object id="10" name="Mushroom" gid="3" x="446.204" y="255.823" width="32" height="32"/>
+  <object id="12" name="Mushroom" gid="3" x="576" y="704" width="32" height="32"/>
+  <object id="15" name="Mushroom" gid="3" x="321.333" y="641.333" width="32" height="32">
+   <properties>
+    <property name="damageHp" type="int" value="10"/>
+    <property name="restoreHp" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="16" name="Mushroom" gid="3" x="357.333" y="710.667" width="32" height="32">
+   <properties>
+    <property name="damageHp" type="int" value="10"/>
+    <property name="restoreHp" type="int" value="20"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="5" name="Doors">
   <object id="7" name="Cave" gid="7" x="416" y="192" width="32" height="32">

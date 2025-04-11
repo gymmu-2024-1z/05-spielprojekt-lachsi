@@ -72,11 +72,11 @@
             8, 2, 6, 2, 1, 2, 1, 2, 1, 6, 1, 1, 6, 1, 8, 1, 1, 1, 1, 8,
             8, 1, 1, 2, 1, 6, 1, 6, 1, 1, 1, 1, 1, 1, 8, 8, 8, 0, 8, 8,
             8, 3, 0, 1, 1, 2, 1, 2, 2, 2, 1, 6, 1, 2, 6, 2, 8, 8, 8, 8,
-            8, 8, 8, 0, 1, 1, 1, 4, 1, 1, 3, 1, 1, 1, 1, 1, 0, 1, 8, 8,
+            8, 8, 8, 0, 1, 1, 1, 4, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 8, 8,
             8, 8, 8, 8, 2, 2, 6, 2, 1, 1, 6, 2, 1, 1, 6, 1, 2, 6, 8, 8,
-            8, 8, 8, 2, 3, 1, 1, 1, 1, 1, 2, 2, 5, 1, 1, 1, 1, 1, 2, 8,
+            8, 8, 8, 2, 0, 1, 1, 1, 1, 1, 2, 2, 5, 1, 1, 1, 1, 1, 2, 8,
             2, 8, 1, 6, 1, 6, 2, 2, 1, 6, 1, 2, 6, 2, 6, 1, 2, 2, 8, 8,
-            8, 6, 1, 1, 1, 2, 0, 1, 1, 1, 1, 1, 1, 1, 1, 3, 2, 2, 8, 8,
+            8, 6, 1, 1, 1, 2, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 2, 2, 8, 8,
             8, 4, 1, 1, 1, 1, 2, 6, 1, 4, 1, 1, 6, 2, 0, 2, 2, 8, 8, 8,
             1, 1, 3, 6, 8, 8, 8, 8, 0, 2, 1, 8, 8, 8, 8, 8, 8, 8, 8, 8,
             8, 8, 8, 8, 8, 2, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8],
@@ -277,6 +277,64 @@
                  "width":32,
                  "x":446.204,
                  "y":255.823
+                }, 
+                {
+                 "gid":3,
+                 "height":32,
+                 "id":12,
+                 "name":"Mushroom",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":576,
+                 "y":704
+                }, 
+                {
+                 "gid":3,
+                 "height":32,
+                 "id":15,
+                 "name":"Mushroom",
+                 "properties":[
+                        {
+                         "name":"damageHp",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"restoreHp",
+                         "type":"int",
+                         "value":20
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":321.333333333333,
+                 "y":641.333333333333
+                }, 
+                {
+                 "gid":3,
+                 "height":32,
+                 "id":16,
+                 "name":"Mushroom",
+                 "properties":[
+                        {
+                         "name":"damageHp",
+                         "type":"int",
+                         "value":10
+                        }, 
+                        {
+                         "name":"restoreHp",
+                         "type":"int",
+                         "value":20
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":357.333333333333,
+                 "y":710.666666666667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -319,7 +377,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":12,
+ "nextobjectid":17,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
@@ -329,12 +387,12 @@
          "columns":4,
          "firstgid":1,
          "image":"..\/tileset.png",
-         "imageheight":102,
+         "imageheight":136,
          "imagewidth":136,
          "margin":1,
          "name":"tileset",
          "spacing":2,
-         "tilecount":12,
+         "tilecount":16,
          "tileheight":32,
          "tiles":[
                 {
