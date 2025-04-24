@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>audio tag in html</Audio><title>
+</head>
+<body>
+    <audio controls autoplay muted>
+         <source src="puplic/Lost boy.mp3"/>
+    </audio>
+</body>
+</html>
