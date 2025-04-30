@@ -45,7 +45,7 @@
  <objectgroup id="3" name="SpawnPoints">
   <object id="12" name="SpawnPlayer" x="16.387" y="430.171"/>
  </objectgroup>
- <objectgroup id="4" name="Items">
+ <objectgroup id="4" name="Mushroom">
   <object id="2" name="Mushroom" gid="3" x="509.046" y="260.747" width="32" height="32">
    <properties>
     <property name="damageHp" type="int" value="20"/>
