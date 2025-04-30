@@ -27,7 +27,7 @@ export default class Level01 extends Base2DScene {
     // Kartendatei mit allen Daten drin.
     this.load.tilemapTiledJSON(
       "map-level-01",
-      "./assets/maps/map-level-01.json",
+      "./assets/maps/map-level-02.json",
     )
   }
 

@@ -100,7 +100,7 @@
  <objectgroup id="5" name="Doors">
   <object id="1" name="Cave" gid="7" x="480" y="32" width="32" height="32">
    <properties>
-    <property name="goToWorld" value="level-03"/>
+    <property name="goToWorld" value="level-02"/>
    </properties>
   </object>
  </objectgroup>

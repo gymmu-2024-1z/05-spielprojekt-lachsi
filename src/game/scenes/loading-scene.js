@@ -39,7 +39,7 @@ export default class LoadingScene extends Phaser.Scene {
       "./assets/atlas/atlas-doors.json",
     )
 
-    this.load.audio("lost-boys", ["./assets/sound/lost-boys.mp3"])
+    // this.load.audio("lost-boys", ["./assets/sound/lost-boys.mp3"])
 
     // Wir möchten auf das Drücken der Leertaste reagieren können, daher müssen
     // wir das hier registrieren.
@@ -56,8 +56,8 @@ export default class LoadingScene extends Phaser.Scene {
       .text(320, 240, "Press SPACE to start the Game.")
       .setOrigin(0.5, 0.5)
 
-    this.sound = this.sound.add("lost-boys")
-    this.sound.play()
+    // this.sound = this.sound.add("lost-boys")
+    // this.sound.play()
   }
 
   update() {
