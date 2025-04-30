@@ -35,7 +35,7 @@ export default class Level02 extends Base2DScene {
     } else if (item instanceof Mushroom) {
       // Dieses Objekt gehört zu der Klasse von "Mushroom"
       this.player.decreaseSpeed(100)
-      this.player.damage(20)
+      this.player.damage(15)
       if (this.player.hp <= 0) {
         this.scene.start("loading")
       }
