@@ -27,7 +27,7 @@ export default class Level01 extends Base2DScene {
     // Kartendatei mit allen Daten drin.
     this.load.tilemapTiledJSON(
       "map-level-01",
-      "./assets/maps/map-level-01.json",
+      "./assets/maps/map-level-02.json",
     )
   }
 
@@ -67,27 +67,49 @@ export default class Level01 extends Base2DScene {
       // Das Objekt ist von der Klasse `Flower`
       this.player.addKey("level-02")
       this.player.increaseSpeed(100)
-      this.player.heal(item.props.restoreHp || 0)
+      this.player.heal(10)
     } else if (item instanceof Mushroom) {
       // Das Objekt ist von der Klasse `Mushroom`
       this.player.decreaseSpeed(100)
-      this.player.damage(item.props.damageHp || 0)
+      this.player.damage(15)
+      if (this.player.hp <= 0) {
+        this.scene.start("loading")
+      }
 
       // TODO: Aktivieren Sie das hier, wenn ein Effekt über eine gewisse Zeit
       // passieren soll.
       // Hier wird der Spieler halb so gross, und mit jedem Frame wird er wieder
       // normaler. Nach 3 Sekunden erreicht er seine normale Grösse.
-      // this.tweens.addCounter({
-      //   from: 0.5,
-      //   to: 1,
-      //   ease: "Linear",
-      //   duration: 3000,
-      //   repeat: 0,
-      //   onUpdate: (tween) => {
-      //     const val = tween.getValue()
-      //     this.player.setScale(val)
-      //   },
-      // })
+      this.tweens.addCounter({
+        from: 0.5,
+        to: 1,
+        ease: "Linear",
+        duration: 3000,
+        repeat: 0,
+        onUpdate: (tween) => {
+          const val = tween.getValue()
+          this.player.rotation += 0.1
+        },
+        onComplete: () => {
+          this.player.rotation = 0
+        },
+      })
+    }
+  }
+
+  update() {
+    super.update()
+    if (this.npcs) {
+      const x = this.player.body.x
+      const y = this.player.body.y
+      ///console.log(x, y)
+      this.npcs.getChildren().forEach((npc) => {
+        const a = npc.body.x
+        const b = npc.body.y
+
+        npc.body.setVelocityX(((a - x) / Math.abs(a - x)) * -100)
+        npc.body.setVelocityY(((b - y) / Math.abs(b - y)) * -100)
+      })
     }
   }
 }

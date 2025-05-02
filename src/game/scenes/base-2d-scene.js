@@ -125,6 +125,13 @@ export default class Base2DScene extends Phaser.Scene {
       () => true,
       this,
     )
+    this.physics.add.overlap(
+      this.player,
+      this.npcs,
+      this.collisionWithHai,
+      () => true,
+      this,
+    )
 
     this.physics.add.collider(
       this.player,
@@ -138,6 +145,10 @@ export default class Base2DScene extends Phaser.Scene {
   npcCollideObstacles(npc, obstacle) {
     if (npc == null) return
     npc.move = "idle"
+  }
+
+  collisionWithHai(player, hai) {
+    this.scene.start("loading")
   }
 
   /**
@@ -156,6 +167,10 @@ export default class Base2DScene extends Phaser.Scene {
    */
   pickUp(actor, item) {
     item.destroy()
+    if (item instanceof Flower) {
+      actor.addKey("flower")
+      console.log(actor.keys)
+    }
   }
 
   /**
